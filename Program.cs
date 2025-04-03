@@ -15,9 +15,8 @@ StaticWebAssetsLoader.UseStaticWebAssets(builder.Environment, builder.Configurat
 
 var app = builder.Build();
 app.UseForwardedHeaders();
-app.UseRouting();
+
 app.UseAuthorization();
-app.MapBlazorHub();
 app.UseAntiforgery();
 app.MapStaticAssets();
 app.MapRazorComponents<App>()
