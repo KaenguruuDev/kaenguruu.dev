@@ -20,11 +20,4 @@
       <_ContentIncludedByDefault Remove="wwwroot\lib\prism\prism.js" />
     </ItemGroup>
 
-    <ItemGroup>
-      <Content Update="Components\Pages\About.razor.css">
-        <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
-        <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      </Content>
-    </ItemGroup>
-
 </Project>
