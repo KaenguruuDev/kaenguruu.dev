@@ -1,0 +1,12 @@
+@inject NavigationManager Navigation
+
+<div class="nav-bar">
+    <button class="nav-button" @onclick='() => NavigateToPage("/")'>Home</button>
+    <button class="nav-button" @onclick='() => NavigateToPage("/projects")'>Projects</button>
+    <button class="nav-button" @onclick='() => NavigateToPage("/about")'>About</button>
+    <button class="nav-button" @onclick='() => NavigateToPage("/contact")'>Contact</button>
+</div>
+
+@code {
+    private void NavigateToPage(string url) => Navigation.NavigateTo(url);
+}

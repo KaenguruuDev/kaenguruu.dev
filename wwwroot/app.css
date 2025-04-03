@@ -1,0 +1,240 @@
+:root {
+    --base-color: #ff7f00;
+    --link-fade-color: #84592e;
+    --background-fade: #2c1800;
+}
+
+@font-face {
+    font-family: 'Iosevka';
+    src: url('IosevkaFixedSlab-SemiBold.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+a {
+    text-decoration: none;
+    background: linear-gradient(90deg, var(--base-color), var(--link-fade-color));
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+html, body {
+    font-family: 'Iosevka', Monospace, sans-serif;
+    background: #000;
+    border: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+.container {
+    border: none;
+    background: radial-gradient(circle, var(--background-fade), rgba(0, 0, 0, 1) 100%);
+    color: white;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 10vh;
+    text-align: center;
+}
+
+.container .centered {
+    padding-top: 40vh;
+}
+
+
+.logo {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    width: 100px;
+    height: 100px;
+    background-color: white;
+    border-radius: 50%;
+}
+
+.nav-bar {
+    position: absolute;
+    top: 10px;
+    font-size: 1.2rem;
+    color: white;
+    padding: 10px 30px;
+    border-radius: 25px;
+    display: flex;
+    gap: 15px;
+}
+
+.nav-button {
+    background-color: #0000;
+    color: gray;
+    padding: 20px 10px;
+    margin: 0 10px;
+    border: none;
+    border-radius: 20px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    font-weight: bold;
+
+    transition: color 0.5s;
+}
+
+.nav-button:hover {
+    color: white;
+}
+
+.heading {
+    font-size: 5rem;
+    font-weight: bold;
+}
+
+.subheading {
+    font-size: 3rem;
+    margin-top: 10px;
+}
+
+.buttons {
+    margin-top: 100px;
+}
+
+.button {
+    background-color: #1e0f00;
+    color: var(--base-color);
+    border: 2px solid var(--base-color);
+    padding: 20px 50px;
+    margin: 0 10px;
+    border-radius: 20px;
+    font-size: 1.5rem;
+    cursor: pointer;
+    font-weight: bold;
+
+    transition: color 0.5s ease;
+}
+
+.button:hover {
+    color: white;
+}
+
+.text-block {
+    display: block;
+    text-align: left;
+    font-size: 1.2rem;
+    white-space: pre-line;
+    max-width: 800px;
+}
+
+.clickable-link {
+    text-decoration: none;
+    color: inherit;
+}
+
+.project-list {
+    margin-top: 80px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.project {
+    border: 1px solid var(--base-color);
+    border-radius: 15px;
+    min-height: 100px;
+    min-width: 500px;
+    max-height: 120px;
+    max-width: 900px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 10px;
+}
+
+.project img {
+    height: 80px;
+    width: 80px;
+    border-radius: 15px;
+    margin-right: 10px;
+}
+
+.project-content {
+    display: flex;
+    flex-direction: column;
+}
+
+.project-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-align: left;
+}
+
+.project-description {
+    font-size: 1rem;
+    white-space: pre-line;
+    text-align: justify;
+    color: white;
+}
+
+.timeline {
+    margin-bottom: 30px;
+}
+
+.timeline .title-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 25px;
+}
+
+.timeline-list {
+    font-size: 1.3rem;
+    margin-left: 45px;
+}
+
+.timeline-item {
+    position: relative;
+    padding-left: 20px;
+}
+
+.timeline-item:not(:last-child) {
+    margin-bottom: 20px;
+}
+
+.timeline-item-title {
+    font-size: 1.4rem;
+    line-height: 1.3;
+    margin-bottom: 7px;
+}
+
+.timeline-list span {
+    color: white;
+    line-height: 1.6;
+}
+
+.timeline-item:not(:last-child)::before {
+    content: "";
+    position: absolute;
+    top: -25px;
+    left: -30px;
+    width: 1px;
+    height: calc(100% + 50px);
+    background: var(--base-color);
+}
+
+.timeline-item::after {
+    content: "";
+    position: absolute;
+    top: 5px;
+    left: -33px;
+    height: 6px;
+    width: 6px;
+    background: var(--base-color);
+    border-radius: 50%;
+    box-shadow: 0 0 0 4px #5e3f17;
+}
+
+.timeline-text {
+    color: white;
+    line-height: 1.6;
+}

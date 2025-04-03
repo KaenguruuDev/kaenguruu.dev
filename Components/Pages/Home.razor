@@ -1,0 +1,25 @@
+﻿@page "/"
+@rendermode InteractiveServer
+@inject NavigationManager Navigation
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kaenguruu Dev</title>
+    <link rel="stylesheet" href="app.css">
+</head>
+
+<div class="container" style="padding-top: 40vh; vertical-align: center;">
+    <NavBar/>
+
+    <div class="heading">Kaenguruu Dev</div>
+    <div class="subheading"></div>
+    <div class="buttons">
+        <button class="button" @onclick='() => NavigateToPage("/projects")'>Projects</button>
+        <button class="button" @onclick='() => NavigateToPage("/about")'>About</button>
+    </div>
+</div>
+
+@code {
+    private void NavigateToPage(string url) => Navigation.NavigateTo(url);
+}
