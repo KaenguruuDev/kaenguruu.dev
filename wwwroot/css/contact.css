@@ -1,17 +1,18 @@
 .service {
-    background: radial-gradient(circle, #0f111a, #1e0f00);
+    background: radial-gradient(circle, #1a160f, #1e0f00);
     padding: 20px;
-    margin-bottom: 10px;
+    margin-bottom: 40px;
     border-radius: 15px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
     position: relative;
-    border: 2px solid transparent;
     background-clip: padding-box;
     min-width: 800px;
     transition: background-color 0.3s ease, transform 0.3s ease, opacity 0.3s ease;
+    border: 1px solid white;
+    min-height: 50px;
 }
 
 .service::before {
@@ -47,7 +48,7 @@
 }
 
 .service-title {
-    font-size: 2em;
+    font-size: 1.5em;
     font-weight: 600;
     color: white;
     text-align: left;
