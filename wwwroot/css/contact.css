@@ -1,0 +1,73 @@
+.service {
+    background: radial-gradient(circle, #0f111a, #1e0f00);
+    padding: 20px;
+    margin-bottom: 10px;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    border: 2px solid transparent;
+    background-clip: padding-box;
+    min-width: 800px;
+    transition: background-color 0.3s ease, transform 0.3s ease, opacity 0.3s ease;
+}
+
+.service::before {
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    border-radius: inherit;
+    opacity: 1;
+}
+
+.service::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: inherit;
+    transition: opacity 0.5s ease, background 0.5s ease, transform 0.5s ease;
+    opacity: 1;
+}
+
+.service:hover::after {
+    opacity: 0;
+}
+
+.service:hover {
+    transform: scale(1.01);
+    transition: all 0.3s ease;
+}
+
+.service-title {
+    font-size: 2em;
+    font-weight: 600;
+    color: white;
+    text-align: left;
+    vertical-align: center;
+    flex: 1;
+}
+
+.service-version {
+    font-size: 2em;
+    font-weight: 600;
+    color: white;
+    text-align: center;
+    vertical-align: center;
+    flex: 0.5;
+}
+
+.service-description {
+    font-size: 1em;
+    color: white;
+    text-align: justify;
+    flex: 1;
+    display: block;
+}

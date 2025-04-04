@@ -1,4 +1,7 @@
 @page "/contact"
+@inject NavigationManager Navigation
+
+<link rel="stylesheet" href="css/contact.css"/>
 
 <PageTitle>Contact</PageTitle>
 
@@ -6,7 +9,26 @@
     <NavBar/>
 
     <div class="subheading">Contact</div>
-    <div class="text-block">
-        CONTACT ME !!!!
+    <div class="service">
+        <div class="service-title">Email</div>
+        <div class="service-description" style="text-align:right">
+            <span class="magic">kaenguruu.dev@gmail.com</span>
+        </div>
+    </div>
+    <div class="service" @onclick='() => NavigateToPage("https://discord.com/users/720176646044385280")'>
+        <div class="service-title">Discord</div>
+        <div class="service-description" style="text-align:right">
+            <span class="magic">KaenguruuDev</span>
+        </div>
+    </div>
+    <div class="service" @onclick='() => NavigateToPage("https://www.linkedin.com/in/jakob-roth-210510335/")'>
+        <div class="service-title">Linked In</div>
+        <div class="service-description" style="text-align:right">
+            <span class="magic">Jakob Roth</span>
+        </div>
     </div>
 </div>
+
+@code {
+    private void NavigateToPage(string url) => Navigation.NavigateTo(url);
+}

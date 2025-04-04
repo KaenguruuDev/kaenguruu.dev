@@ -1,6 +1,6 @@
 :root {
     --base-color: #ff7f00;
-    --link-fade-color: #84592e;
+    --link-fade-color: #93590f;
     --background-fade: #2c1800;
 }
 
@@ -174,67 +174,4 @@ html, body {
     white-space: pre-line;
     text-align: justify;
     color: white;
-}
-
-.timeline {
-    margin-bottom: 30px;
-}
-
-.timeline .title-wrapper {
-    display: flex;
-    align-items: center;
-    gap: 15px;
-    margin-bottom: 25px;
-}
-
-.timeline-list {
-    font-size: 1.3rem;
-    margin-left: 45px;
-}
-
-.timeline-item {
-    position: relative;
-    padding-left: 20px;
-}
-
-.timeline-item:not(:last-child) {
-    margin-bottom: 20px;
-}
-
-.timeline-item-title {
-    font-size: 1.4rem;
-    line-height: 1.3;
-    margin-bottom: 7px;
-}
-
-.timeline-list span {
-    color: white;
-    line-height: 1.6;
-}
-
-.timeline-item:not(:last-child)::before {
-    content: "";
-    position: absolute;
-    top: -25px;
-    left: -30px;
-    width: 1px;
-    height: calc(100% + 50px);
-    background: var(--base-color);
-}
-
-.timeline-item::after {
-    content: "";
-    position: absolute;
-    top: 5px;
-    left: -33px;
-    height: 6px;
-    width: 6px;
-    background: var(--base-color);
-    border-radius: 50%;
-    box-shadow: 0 0 0 4px #5e3f17;
-}
-
-.timeline-text {
-    color: white;
-    line-height: 1.6;
 }
