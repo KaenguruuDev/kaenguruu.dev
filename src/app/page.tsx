@@ -1,10 +1,52 @@
+"use client";
+
 import React from "react";
+import { useEffect } from "react";
 
 const birthYear = 2007;
 const currentYear = new Date().getFullYear();
 const age = currentYear - birthYear;
 
+const themes = [
+  {
+    text: "#ecf3f1",
+    background: "#060b09ff",
+    primary: "#9ad5c1",
+    secondary: "#2c8667",
+    accent: "#40cf9e",
+  },
+  {
+    text: "#eee6f1",
+    background: "#0a050c",
+    primary: "#c893db",
+    secondary: "#661f7f",
+    accent: "#ae2cdd",
+  },
+  {
+    text: "#ecf5f7",
+    background: "#050d0fff",
+    primary: "#89cfe1",
+    secondary: "#1a7188",
+    accent: "#23bae2",
+  },
+  {
+    text: "#f7f1e9",
+    background: "#0e0904ff",
+    primary: "#e9bd81",
+    secondary: "#985e0e",
+    accent: "#fa9c1b",
+  },
+];
+
 export default function Home() {
+  useEffect(() => {
+    const theme = themes[Math.floor(Math.random() * themes.length)];
+    const root = document.documentElement;
+    Object.entries(theme).forEach(([key, value]) => {
+      root.style.setProperty(`--${key}`, value);
+    });
+  }, []);
+
   return (
     <main className="min-h-screen bg-background text-text font-sans">
       <section className="flex flex-col items-center justify-center py-24 px-6 text-center">
@@ -97,6 +139,10 @@ export default function Home() {
                   Cronn
                 </a>{" "}
                 (Backend, CI/CD, Testing)
+                <br />
+                <a href="https://blog.cronn.de/en/" className="link">
+                  Blog Post about OpenRewrite
+                </a>
               </p>
             </div>
           </li>

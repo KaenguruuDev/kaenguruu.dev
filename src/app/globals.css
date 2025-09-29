@@ -2,11 +2,11 @@
 @import "tailwindcss";
 
 :root {
-  --text: #f3e2f4;
-  --background: #0b030b;
-  --primary: #dd88e5;
-  --secondary: #7c1585;
-  --accent: #9511a2;
+  --text: #eaf0f0;
+  --background: #0a1212;
+  --primary: #a3d4d5;
+  --secondary: #2e7f81;
+  --accent: #3ec7ca;
   font-family: 'Electrolize', sans-serif;
 }
 
