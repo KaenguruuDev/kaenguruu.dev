@@ -1,0 +1,84 @@
+@import url('https://fonts.googleapis.com/css2?family=Electrolize&display=swap');
+@import "tailwindcss";
+
+:root {
+  --text: #f3e2f4;
+  --background: #0b030b;
+  --primary: #dd88e5;
+  --secondary: #7c1585;
+  --accent: #9511a2;
+  font-family: 'Electrolize', sans-serif;
+}
+
+.bg-background {
+  background-color: var(--background);
+}
+
+body {
+  background-color: var(--background);
+  font-family: 'Electrolize', sans-serif;
+}
+
+.text-text {
+  color: var(--text);
+}
+
+.bg-primary {
+  background-color: var(--primary);
+}
+
+.text-accent {
+  color: var(--accent);
+}
+
+.border-secondary {
+  border-color: var(--secondary);
+}
+
+.link {
+  color: var(--primary);
+  transition: color 0.2s;
+  font-family: 'Electrolize', sans-serif;
+}
+
+p {
+  font-family: 'Electrolize', sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Electrolize', sans-serif;
+}
+
+.link:hover {
+  color: var(--accent);
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+html {
+  scrollbar-width: none;
+  /* Firefox */
+  -ms-overflow-style: none;
+  /* IE 10+ */
+}
