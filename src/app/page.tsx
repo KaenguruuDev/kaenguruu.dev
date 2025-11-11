@@ -56,7 +56,7 @@ export default function Home() {
         </h1>
         <div className="flex gap-8 mb-10">
           <a
-            href="https://github.com/kaenguruu"
+            href="https://github.com/KaenguruuDev"
             target="_blank"
             rel="noopener noreferrer"
             className="bg-primary text-background px-8 py-4 rounded-xl shadow-lg hover:shadow-xl transform hover:scale-105 transition-all font-semibold mt-8"
@@ -72,7 +72,7 @@ export default function Home() {
             LinkedIn
           </a>
           <a
-            href="mailto:info@kaenguruu.dev"
+            href="mailto:kaenguruu.dev@gmail.com"
             className="bg-primary text-background px-8 py-4 rounded-xl shadow-lg hover:shadow-xl transform hover:scale-105 transition-all font-semibold mt-8"
           >
             Email
